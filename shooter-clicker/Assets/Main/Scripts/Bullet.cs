@@ -18,6 +18,7 @@ public class Bullet : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (transform.position.x > 10) Destroy(this.gameObject);
         rb.MovePosition(rb.transform.position + new Vector3(1,0,0) * speed * Time.fixedDeltaTime);
     }
 }
