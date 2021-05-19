@@ -18,6 +18,6 @@ public class Bullet : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.transform.position + transform.up * speed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.transform.position + new Vector3(1,0,0) * speed * Time.fixedDeltaTime);
     }
 }

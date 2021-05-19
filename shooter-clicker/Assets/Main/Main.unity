@@ -331,7 +331,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1604245972}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.66, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 434948284}
@@ -364,6 +364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 8061154667514337443, guid: 4c42b8ace5620e244a1a9c4ef61ee10e,
     type: 3}
-  fireRate: 5
-  shotSpeed: 1
+  fireRate: 0.25
+  shotSpeed: 10
   muzzleLocation: {fileID: 434948283}
+  audioSource: {fileID: 0}
