@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class FireBullet : MonoBehaviour
 {
     [SerializeField]
-    private GameObject bulletPrefab;
+    private GameObject[] bullets;
     [SerializeField]
     private float fireRate;
     [SerializeField]
@@ -59,11 +60,12 @@ public class FireBullet : MonoBehaviour
 
     private void HandleShoot()
     {
-        var bullet = Instantiate(bulletPrefab);
-        bullet.GetComponent<Bullet>().speed = shotSpeed;
+        var bullet = bullets.FirstOrDefault(b => !b.activeSelf);
 
         if (bullet != null)
         {
+            bullet.SetActive(true);
+            bullet.GetComponent<Bullet>().speed = shotSpeed;
             bullet.transform.position = muzzleLocation.transform.position;
             bullet.transform.rotation = muzzleLocation.transform.rotation;
         }

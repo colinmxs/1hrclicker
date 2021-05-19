@@ -11,8 +11,8 @@ public class FollowMouse : MonoBehaviour
                                                         mouse.y,
                                                         mouse.z));
         float newY;
-        if (mouseWorld.y > 4) newY = 4;
-        else if (mouseWorld.y < -4) newY = -4;
+        if (mouseWorld.y > 5) newY = 5f;
+        else if (mouseWorld.y < -5) newY = -5f;
         else newY = mouseWorld.y;
         Vector3 newPosition = new Vector3(-7.5f, newY, 0);
         this.transform.position = newPosition;
